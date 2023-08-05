@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TextSnap</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/site.webmanifest">
+</head>
+<body>
+    <header>
+        <h1>Image to Text Converter</h1>
+    </header>
+    <main>
+        <div class="container">
+            <input type="file" id="imageInput" accept="image/*">
+            <button id="convertButton">Convert</button>
+            <div id="pasteContainer" contenteditable="true" placeholder="Paste your image here"></div>
+            <button id="pasteButton">Paste Image</button>
+            <div id="loadingSpinner" class="loading-spinner hidden"></div>
+            <textarea id="outputText" placeholder="Extracted text will appear here" readonly></textarea>
+            <button id="copyButton">Copy</button>
+            <div class="drag-drop-area" id="dragDropArea">
+                <p>Drag &amp; drop an image here</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>by Your Name</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
